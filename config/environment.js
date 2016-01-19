@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'intest-front',
+    podModulePrefix: 'intest-front/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
