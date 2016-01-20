@@ -1,0 +1,11 @@
+{{outlet}}
+
+<ul>
+  {{#each model as |movie|}}
+    <li>
+      <strong>{{movie.title}}</strong><br><br>
+      <em>by</em>
+      {{movie.year}}
+    </li>
+  {{/each}}
+</ul>
