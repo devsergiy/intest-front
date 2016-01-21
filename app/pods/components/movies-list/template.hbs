@@ -1,9 +1,22 @@
-<ul>
-  {{#each movies as |movie|}}
-    <li>
-      <strong>{{movie.title}}</strong><br><br>
-      <em>by</em>
-      {{movie.year}}
-    </li>
-  {{/each}}
-</ul>
+{{#link-to 'movies.new' class="btn btn-secondary pull-xs-right"}}Add new movie{{/link-to}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Title</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each movies as |movie|}}
+      <tr>
+        <td>{{movie.year}}</td>
+        <td>
+           {{#link-to 'movie' movie}}{{movie.title}}{{/link-to}}
+        </td>
+        <td>{{movie.rating}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
