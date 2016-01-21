@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('movies', { path: '/' });
+  this.route('login');
+  this.route('sign-up');
 });
 
 export default Router;

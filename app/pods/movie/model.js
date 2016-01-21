@@ -5,6 +5,5 @@ export default DS.Model.extend({
   rating: DS.attr('number'),
   userRating: DS.attr('number'),
   year: DS.attr('number'),
-  user: DS.belongsTo('user'),
   directors: DS.hasMany('person', { async: true })
 });

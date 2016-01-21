@@ -1,0 +1,18 @@
+{{#if errorMessage}}
+  <div data-alert class='alert alert-box radius'>
+    {{errorMessage}}
+    <a {{action 'closeMessage'}} class='close'>x</a>
+  </div>
+{{/if}}
+
+<form {{action 'authenticate' on='submit'}}>
+  <div class="form-group">
+    <label for='email'>Email</label>
+    {{input id='email' placeholder='Enter email' value=email class='form-control'}}
+  </div>
+  <div class="form-group">
+    <label for='password'>Password</label>
+    {{input id='password' placeholder='Enter Password' type='password' value=password class='form-control'}}
+  </div>
+  <button type='submit' class="btn btn-lg btn-primary btn-block">Login</button>
+</form>
