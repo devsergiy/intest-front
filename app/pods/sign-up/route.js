@@ -1,7 +1,8 @@
 import Ember from 'ember';
+import UnauthenticatedRouteMixin from 'ember-simple-auth/mixins/unauthenticated-route-mixin';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(UnauthenticatedRouteMixin,{
   model() {
-    this.get('store').createRecord('user');
-  }
+    return this.get('store').createRecord('user');
+  },
 });
