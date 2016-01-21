@@ -8,12 +8,7 @@
     </ul>
 
     <div class="pull-xs-right">
-      {{#if session.isAuthenticated}}
-        <a {{action 'invalidateSession'}} class="btn btn-danger">Logout</a>
-      {{else}}
-        {{#link-to 'login' class="btn btn-success"}}Login{{/link-to}}
-        {{#link-to 'sign-up' class="btn btn-success"}}Sign up{{/link-to}}
-      {{/if}}
+      {{login-buttons}}
     </div>
   </nav>
 </div>
