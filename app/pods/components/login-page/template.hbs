@@ -1,11 +1,13 @@
-{{#if errorMessage}}
-  <div data-alert class='alert alert-box radius'>
-    {{errorMessage}}
-    <a {{action 'closeMessage'}} class='close'>x</a>
-  </div>
-{{/if}}
+<form {{action 'authenticate' on='submit'}} class='form-signin'>
+  <h2 class="form-signin-heading">Please login</h2>
 
-<form {{action 'authenticate' on='submit'}}>
+  {{#if errorMessage}}
+    <div data-alert class='alert alert-box radius'>
+      {{errorMessage}}
+      <a {{action 'closeMessage'}} class='close'>x</a>
+    </div>
+  {{/if}}
+
   <div class="form-group">
     <label for='email'>Email</label>
     {{input id='email' placeholder='Enter email' value=email class='form-control'}}

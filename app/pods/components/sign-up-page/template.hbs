@@ -1,12 +1,12 @@
-<h2>Register</h2>
+<form {{action 'createUser' on='submit'}}  class='form-signin'>
+  <h2 class="form-signin-heading">Sign up</h2>
 
-{{#each user.errors.messages as |message|}}
-  <div class="text-danger">
-    {{message}}
-  </div>
-{{/each}}
+  {{#each user.errors.messages as |message|}}
+    <div class="text-danger">
+      {{message}}
+    </div>
+  {{/each}}
 
-<form {{action 'createUser' on='submit'}}>
   <div class="form-group">
     <label for='firstName'>FIrst name</label>
     {{input id='firstName' placeholder='Enter first name' value=firstName class='form-control'}}
