@@ -5,11 +5,11 @@
     <tr>
       <th>Year</th>
       <th>Title</th>
-      <th>Rating</th>
+      <th {{action 'toggleSort'}}>Rating <span class="{{iconClass}}"></span></th>
     </tr>
   </thead>
   <tbody>
-    {{#each movies as |movie|}}
+    {{#each sortedMovies as |movie|}}
       <tr>
         <td>{{movie.year}}</td>
         <td>
