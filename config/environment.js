@@ -31,8 +31,8 @@ module.exports = function(environment) {
   };
 
   ENV['ember-simple-auth'] = {
-    routeAfterAuthentication: '/',
-    routeIfAlreadyAuthenticated: '/'
+    routeAfterAuthentication: '/movies',
+    routeIfAlreadyAuthenticated: '/movies'
   };
 
   if (environment === 'development') {
