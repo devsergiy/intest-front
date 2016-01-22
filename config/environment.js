@@ -17,13 +17,14 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      API_HOST: '/api'
     },
 
     contentSecurityPolicy: {
       'default-src': "'none'",
       'script-src':  "'self'",
       'font-src':    "'self' data:",
-      'connect-src': "'self' localhost:3000",
+      'connect-src': "'self' localhost:3000 ",
       'img-src':     "'self'",
       'style-src':   "'self'",
       'media-src':   "'self'"
@@ -55,10 +56,6 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
-  }
-
-  if (environment === 'production') {
-
   }
 
   return ENV;
