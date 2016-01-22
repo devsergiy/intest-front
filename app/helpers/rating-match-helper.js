@@ -3,8 +3,8 @@ export function match(rating, query) {
     return true;
   }
 
-  var sign = /\<|\>/.exec(query)
-  var value = parseFloat(/\d{1}(.\d)?/.exec(query)[0])
+  var sign = /<|>/.exec(query);
+  var value = parseFloat(/\d{1}(.\d)?/.exec(query)[0]);
 
   if (sign === null) {
     return rating === value;
