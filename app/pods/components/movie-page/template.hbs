@@ -6,10 +6,13 @@
         <h6 class="card-subtitle text-muted">{{movie.year}}</h6>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{movie.rating}}</li>
+        <li class="list-group-item">{{movie.rate}}</li>
+        <li class="list-group-item">Director: {{movie.director}}</li>
+        <li class="list-group-item">Actors: {{movie.actors}}</li>
       </ul>
       <div class="card-block">
         {{#link-to 'movie.edit' movie class="card-link"}}Edit{{/link-to}}
+        <button {{action 'deleteMovie'}} class="card-link btn-link">Delete</button>
       </div>
     </div>
   </div>
